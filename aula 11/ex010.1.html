@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+<h1>Sistemas de Multas</h1>
+Nacionalidade: <input type="text" name="txt1" id="txt1">
+<input type="button" value="Pesquisar" onclick="calcular()">
+<div id="res">
+
+</div>
+<script>
+    
+function calcular(){
+    var txt = window.document.getElementById("txt1") // essa variável serve para ligar o JS com a cx de texto
+    var res = window.document.getElementById("res")
+    var país = String(txt.value)
+    res.innerHTML = `Você é do(a) ${país}.`
+    if (país=="Brasil") { res.innerHTML+= "<p>você é Brasileiro!</p>"
+        
+    } else {res.innerHTML+= "Você é estrangeiro!"
+        
+    }
+    
+}
+</script>
+</body>
+</html>

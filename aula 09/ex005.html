@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(41, 91, 255); /*passe o mouse em cima ca cor para alterar a cor*/
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body><h1>Iniciando Estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clica em mim</div>
+
+    <script>
+        //var d = window.document.getElementById("msg")//
+        var corpo = window.document.body // ou apenas ... = document.body
+        var p1 = window.document.getElementsByTagName("p")[1] // entre colchetes [] é o nº do psarágrafo(p), o 0 é o 1º p e assim por diante
+    window.document.write("Está escrito assim: " + p1.innerHTML) //innerText é o texto q está dentro da variável p1 sem a formatação, no caso sem o negrito e o innerHTML pega o texto inteiro
+p1.style.color = "yellow" // mudando a cor da var p1
+corpo.style.background = "blue"
+/*window.alert(p1.innerText)    Se eu quiser emitir um alerta com a variável p1 //
+d.style.background = "green"   
+//d.innerText = "Estou aguardando..."// mudo umtexto já exixtente pelo DOM
+window.document.getElementById("msg").innerText = "Olá" 
+var d = window.document.getElementsByName("msg")[0]
+d.innerText = "Olá"*/
+var d = window.document.querySelector("div#msg") //quando é Id será representado por #, e quando for Class por .(ponto)
+d.style.color= "black" //color botará a cor desejada nas palavras q se encontram nessa variável apenas
+d.style.background = "white" // background botará a cor desejada não somente nas palavras, mas em toda a linha
+
+    </script>
+    
+</body>
+</html>
